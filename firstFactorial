@@ -1,0 +1,7 @@
+var FirstFactorial = function (num) {
+  var multiplier = 1;
+	for (var i = 1; i < num + 1; i++) {
+		multiplier = multiplier * i;
+	}
+	return multiplier;
+}
