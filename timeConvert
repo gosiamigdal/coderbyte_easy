@@ -1,0 +1,5 @@
+var TimeConvert = function (num) {
+  var min = num % 60;
+	var hours = (num - min) / 60; 
+	return hours + ":" + min; 
+}
