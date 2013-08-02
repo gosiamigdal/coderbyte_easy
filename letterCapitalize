@@ -1,0 +1,19 @@
+var strToArray = function (str) {
+  var array = new Array(str.length);
+	for (var i = 0; i < str.length; i++) {
+		array[i] = str[i];
+	}
+	return array;
+}
+
+
+var letterCapitalize = function (str) {
+	var array = strToArray(str);
+	array[0] = array[0].toUpperCase();
+	for (var i = 1; i < array.length; i++) {
+		if (" " === array[i]) {
+			array[i + 1] = array[i + 1].toUpperCase();
+		}
+	}
+	return array.join("");
+}
