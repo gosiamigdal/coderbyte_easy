@@ -1,0 +1,41 @@
+var vowelUpper = function(str) {
+  var result = new Array(str.length);
+	for (var i = 0; i < str.length; i++) {
+		var element = str[i].toLowerCase();
+		if ("aeouiy".indexOf(element) !== -1) {
+			result[i] = str[i].toUpperCase();
+		} else {
+			result[i] = element;
+		}
+	}
+	return result.join("");
+}
+
+
+
+var isLowerLetter = function (char) {
+	var code = char.charCodeAt(0);
+	var a = "a".charCodeAt(0);
+	var z = "z".charCodeAt(0);
+	return code >= a && code <= z;
+}
+
+
+
+
+var letterChanges = function (str) {
+	var str = str.toLowerCase();
+	var result = new Array(str.length);
+	for (var i = 0; i < str.length; i++) {
+		if (str[i] === "z") {
+			result[i] = "a";
+		} else if (isLowerLetter(str[i]) === true) {
+			var code = str[i].charCodeAt(0) + 1;
+			result[i] = String.fromCharCode(code);
+		} else {
+			result[i] = str[i];
+		}
+	}
+	return vowelUpper(result.join(""));
+}
+
