@@ -1,0 +1,12 @@
+var simpleSymbols = function (str) {
+  var string = str.toLowerCase();
+	for (var i = 0; i < string.length; i++) {
+		var value = string[i];
+		if ("abcdefghijklmnopqrstuvwxyz".indexOf(value) !== -1) {
+			if (string[i - 1] !== "+" || string[i + 1] !== "+") {
+				return "false";
+			}
+		} 
+	}
+	return "true";
+}
