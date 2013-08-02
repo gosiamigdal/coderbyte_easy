@@ -1,0 +1,16 @@
+var ExOh = function (str) {
+  var xAmount = 0;
+	var oAmount = 0;
+	for (var i = 0; i < str.length; i++) {
+		if (str[i] === "x") {
+			xAmount = xAmount + 1;
+		} else {
+			oAmount = oAmount + 1;
+		}
+	}
+	if (xAmount === oAmount) {
+		return "true";
+	} else {
+		return "false";
+	}
+}
