@@ -1,0 +1,26 @@
+var remove = function (str) {
+  var str = str.toLowerCase();
+	var noSymbols = [];
+	for (var i = 0; i < str.length; i++) {
+		if ("abcdefghijklmnopqrstuvwxyz ".indexOf(str[i]) !== -1) {
+			noSymbols[i] = str[i];
+		}
+	}
+	return noSymbols.join(""); 
+}
+
+
+
+var wordCount = function (str) {
+	var str = remove(str);
+	var result = 0; 
+	for (var i = 0; i < str.length; i++) {
+		if (str[i] === " ") {
+			result = result + 1; 
+		} else {
+			result = result; 
+		}
+	}
+var last = result + 1;
+return last;
+}
