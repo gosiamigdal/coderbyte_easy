@@ -1,0 +1,7 @@
+var alphabetSoup = function (str) {
+  var result = new Array(str.length);
+	for (var i = 0; i < str.length; i++) {
+		result[i] = str[i];
+	}
+	return result.sort().join("");
+}
