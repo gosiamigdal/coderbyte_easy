@@ -1,0 +1,13 @@
+var palindrome = function (str) {
+  var str = str.toLowerCase(); 
+	var reversed = new Array(str.length);
+	for (var i = 0; i < str.length; i++) {
+		reversed[i] = str[str.length - 1 - i];
+	}
+	reversed = reversed.join("");
+	if (str === reversed) {
+		return "true";
+	} else {
+		return "false";
+	}
+}
