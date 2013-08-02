@@ -1,0 +1,16 @@
+var swapCase = function (str) {
+  var result = new Array(str.length);
+	for (var i = 0; i < str.length; i++) {
+		if ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(str[i]) !== -1) {
+			if (str[i].toUpperCase() !== str[i]) {
+				result[i] = str[i].toUpperCase();
+			} else {
+				result[i] = str[i].toLowerCase();
+			}
+		} else {
+			result[i] = str[i];
+		}
+
+	}
+	return result.join("");
+}
