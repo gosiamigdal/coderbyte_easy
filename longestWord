@@ -1,0 +1,25 @@
+var remove = function (str) {
+  var noSymbols = new Array();
+	for (var i = 0; i < str.length; i++) {
+		if ("abcdefghijklmnopqrstuvwxyz ".indexOf(str[i].toLowerCase()) !== -1) {
+			noSymbols.push(str[i]);
+		} 
+	}
+	return noSymbols.join("");
+}
+
+
+var LongestWord = function (str) {
+	var str = remove(str);
+	var words = str.split(" ");
+	var max = 0;
+	var result = undefined;
+	for (var i = 0; i < words.length; i++) {
+		var length = words[i].length;
+		if (max < length) {
+			max = length;
+			result = words[i];
+		}
+	}
+	return result;
+}
