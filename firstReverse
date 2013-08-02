@@ -1,0 +1,7 @@
+function FirstReverse(str) { 
+   var result = new Array(str.length);
+  	for (var i = 0; i < str.length; i++) {
+  		result[i] = str[str.length - 1 - i];
+ 	}
+ 	return result.join("");
+}
