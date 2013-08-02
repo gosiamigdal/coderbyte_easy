@@ -1,0 +1,9 @@
+var vowelCount = function (str) {
+    var vowelsAmount = 0;
+    for (var i = 0; i < str.length; i++) {
+        if ("aeiou".indexOf(str[i]) !== -1) {
+            vowelsAmount = vowelsAmount + 1; 
+        }
+    }
+    return vowelsAmount; 
+}
